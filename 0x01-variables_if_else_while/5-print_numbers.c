@@ -1,18 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- *
- * Return: always 0 when successful
+ * main - main block
+ * Description: Print all numbers of base 10, starting from 0.
+ * Return: 0
  */
 
 int main(void)
 {
-	int i;
+	int x = 0;
 
-	for (i = 0; i < 10; i++)
+	while (x < 10)
 	{
-		printf("%d\n", i);
+		printf("%d", x);
+		x++;
 	}
+
+	printf("\n");
 	return (0);
 }
