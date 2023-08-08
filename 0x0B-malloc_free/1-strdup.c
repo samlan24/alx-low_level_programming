@@ -10,6 +10,7 @@
 char *_strdup(char *str)
 {
 	int i;
+	char *d;
 
 	if (str == NULL)
 		return (NULL);
@@ -21,15 +22,15 @@ char *_strdup(char *str)
 		length++;
 	}
 
-	char *duplicated = (char *)malloc(length + 1);
+	d = (char *)malloc(length + 1);
 
-	if (duplicated == NULL)
+	if (d == NULL)
 		return (NULL);
 
-	for (i = 0; i < length; i++)
+	for (i = 0; i <= length; i++)
 	{
-		duplicated[i] = str[i];
+		d[i] = str[i];
 	}
 
-	return (duplicated);
+	return (d);
 }
