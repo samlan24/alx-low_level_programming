@@ -9,9 +9,6 @@
 
 char *_strdup(char *str)
 {
-	int i;
-	char *d;
-
 	if (str == NULL)
 		return (NULL);
 
@@ -22,12 +19,12 @@ char *_strdup(char *str)
 		length++;
 	}
 
-	d = (char *)malloc(length + 1);
+	char *d = (char *)malloc(length + 1);
 
 	if (d == NULL)
 		return (NULL);
 
-	for (i = 0; i <= length; i++)
+	for (int i = 0; i <= length; i++)
 	{
 		d[i] = str[i];
 	}
