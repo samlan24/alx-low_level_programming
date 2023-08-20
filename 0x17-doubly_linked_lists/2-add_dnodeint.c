@@ -8,30 +8,31 @@
  * @n: value of the element
  * Return: the address of the new element
  */
-
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
+	dlistint_t *new;
+	dlistint_t *h;
 
-	dlistint_t *new_node;
-	dlistint_t *temp;
-
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL)
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
 		return (NULL);
 
-	new_node->n = n;
-	new_node->prev = NULL;
-	temp = *head;
+	new->n = n;
+	new->prev = NULL;
+	h = *head;
 
-	if (temp != NULL)
-		temp = temp->prev;
+	if (h != NULL)
+	{
+		while (h->prev != NULL)
+			h = h->prev;
+	}
 
-	new_node->next = temp;
+	new->next = h;
 
-	if (temp != NULL)
-		temp->prev = new_node;
+	if (h != NULL)
+		h->prev = new;
 
-	*head = new_node;
+	*head = new;
 
-	return (new_node);
+	return (new);
 }
