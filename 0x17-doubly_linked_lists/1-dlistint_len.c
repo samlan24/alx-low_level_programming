@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * dlistint_len - prints number of elements of dlistint_t list
  *@h: head of the list
