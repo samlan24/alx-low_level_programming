@@ -2,7 +2,7 @@
 /**
  * print_listint - prints all elements in a list
  * @h: pointer to the node
- * Return: returns all elements in a list
+ * Return: returns number of elements in a list
  */
 
 size_t print_listint(const listint_t *h)
@@ -18,5 +18,5 @@ size_t print_listint(const listint_t *h)
 		count++;
 		ptr = ptr->next;
 	}
-	return (count)
+	return (count);
 }
